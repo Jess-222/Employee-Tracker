@@ -1,11 +1,28 @@
 USE employees_db;
 
-INSERT INTO department (name) VALUES
-("Sales"), 
-("Human Resources");
+INSERT INTO department (name) 
+VALUES
+('Sales'), 
+('Human Resources'),
+('Information Systems and Technology'),
+('Finance'),
+("Legal"),
+('Security');
 
-INSERT INTO role (title, salary, department_id) VALUES
-("Web Developer", 90000, 1)
+INSERT INTO role (title, salary, department_id) 
+VALUES
+('Web Developer', 90000, 1),
+('Accountant', 70000, 2),
+('Paralegal', 50000, 3),
+('Manager', 70000, 4),
+('Engineer', 90000, 5),
+('Sales Rep', 40000, 6);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
-("Antonia", "Solar", 1, )
+INSERT INTO employee (first_name, last_name, role_id, manager_id) 
+VALUES
+('Antonia', 'Solar', 1, 6),
+('John', 'Smith', 2, 5),
+('Valentina', 'Toro', 3, 4),
+('Maria', 'Hall', 4, 3),
+('David', 'Abarca', 5, 2),
+('Nikki', 'Coca', 6, 1);
