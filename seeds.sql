@@ -2,12 +2,12 @@ USE employees_db;
 
 INSERT INTO department (name) 
 VALUES
-('Sales'), 
-('Human Resources'),
 ('Information Systems and Technology'),
 ('Finance'),
 ("Legal"),
-('Security');
+('Human Resources'),
+('Security'),
+('Sales'); 
 
 INSERT INTO role (title, salary, department_id) 
 VALUES
@@ -22,7 +22,7 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
 ('Antonia', 'Solar', 1, 6),
 ('John', 'Smith', 2, 5),
-('Valentina', 'Toro', 3, 4),
+('Valentina', 'Toro', 2, 4),
 ('Maria', 'Hall', 4, 3),
 ('David', 'Abarca', 5, 2),
 ('Nikki', 'Coca', 6, 1);
