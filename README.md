@@ -28,6 +28,8 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 ## Link to walk-through video
 
+https://drive.google.com/file/d/1Hc3lsF-MBbs6D33caP8wIKAAb8V1LN0L/view
+
 ## Link to GitHub Repository
 
 https://github.com/Jess-222/Employee-Tracker.git
