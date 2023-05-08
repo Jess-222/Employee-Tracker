@@ -115,17 +115,16 @@ const addDepartment = () => {
 const addRole = () => {
     connection.query(query, function (err, res) {
         if (err) throw (err);
-    });
-    inquirer.prompt([
-        {
+    inquirer.prompt(
+        [{
             name: "roleName",
             type: "input",
             message: "What is the name of the role you would like to add?",
         },
         {
-            name: "salary",
+            name: "addSalary",
             type: "input",
-            message: "What is this role's salary?",
+            message: "What is this role's salary?"
         },
         {
             name: "departmentId",
@@ -138,13 +137,16 @@ const addRole = () => {
             },
             message: "What department does this new role belong to?",
         },
-    ]).then( function (answer) {
-        connection.query("INSERT INTO role SET ?",
-        {
-            name: response.message,
+    ])
+    .then( function (answer) {
+        connection.query("INSERT INTO role SET ?",{
+            role_name: answer.roleName,
+            salary: answer.addSalary,
+            department_id: answer.department.Id,
         }),
         start();
     });
+});
 };
 
 const addEmployee = () => {
