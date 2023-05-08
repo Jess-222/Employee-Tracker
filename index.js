@@ -93,14 +93,11 @@ const viewEmployees = () => {
 
 // ADD  DEPARTMENT
 const addDepartment = () => {
-    connection.query(query, function (err, res) {
-        if (err) throw (err);
-    });
     inquirer.prompt([
         {
             name: "departmentName",
             type: "input",
-            message: "What is the name of the new department you would like to add?"
+            message: "New Department Name?",
         }
     ]).then( function (answer) {
         connection.query("INSERT INTO departments SET ?",
@@ -113,7 +110,7 @@ const addDepartment = () => {
 
 // ADD ROLE
 const addRole = () => {
-    connection.query(query, function (err, res) {
+    connection.query("SELECT * FROM department", function (err, res) {
         if (err) throw (err);
     inquirer.prompt(
         [{
